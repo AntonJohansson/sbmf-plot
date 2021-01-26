@@ -69,8 +69,9 @@ set xtics ('4' 4, '' 8, '' 12, '16' 16, '' 20, '' 24, '' 28, '32' 32, '' 36, '' 
 set format y '%.3f'
 set ytics border 2.705,0.0250,2.760;
 set yrange [2.70:2.765];
-set key at screen 0.75, 1.125;
+set key at screen 0.925, 1.075;
 set key box;
+set key maxrows 2;
 #set key outside right;
 set key spacing 1.5;
 #set key at graph 1.0,0.975;

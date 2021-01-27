@@ -3,8 +3,12 @@ set output 'imgs/gp_pt_sweep_G.eps';
 
 set size 0.75, 0.75;
 
+set format y '%.1f';
 set ylabel 'Energy rel. to $E_\mathrm{GP}$ (a.\,u.)';
-set label 1 '$\lambda = -0.5$' at graph 0.4, 0.5;
+set xlabel '$\lambda = g(N-1), N=100$ \quad (a.\,u.)';
+set key at graph 0.75, 0.65;
+set xtics -5,1,5;
+set key spacing 1.5;
 
 plot 'out' u 1:3 w linespoints lw 2              title '$E_\mathrm{BestMF}$', \
      'out' u 1:5 w linespoints dt 2 lc 4 lw 2    title '$E_\mathrm{RSPT2}$', \

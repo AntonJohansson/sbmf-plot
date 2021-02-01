@@ -9,8 +9,6 @@ set ylabel 'Density per particle (a.\,u.)';
 set xlabel 'Position $x$ (a.\,u.)';
 set xrange [-3:3];
 set yrange [0:6];
-plot 'out_l-1.00_W' u 1:2 w lines lw 3 title 'Potential', \
-     'out_l-1.00_W' u 1:3 w lines dt 6 lc 3 lw 3 title 'State 1', \
-     'out_l-1.00_W' u 1:4 w lines dt 4 lc 4 lw 3 title 'State 2', \
-     'out_l-1.50_W' u 1:3 w lines dt 5 lc 5 lw 3 title 'State 3', \
-     'out_l-1.50_W' u 1:4 w lines dt 8 lc 6 lw 3 title 'State 4';
+plot 'out_W' u 1:2 w lines lw 3 title 'Potential', \
+     'out_W' u 1:3 w lines dt 6 lc 3 lw 3 title 'State 1', \
+     'out_W' u 1:4 w lines dt 4 lc 4 lw 3 title 'State 2', \

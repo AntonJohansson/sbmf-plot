@@ -29,12 +29,12 @@ set label 1 '$g = -1/6$' at graph 0.4, 0.5;
 unset key;
 @TMARGIN; @LMARGIN;
 plot \
-	'out_g-0.17' u 1:2				w linespoints ls 1 	title '$E_\mathrm{GP}$', \
-	'jakob/outgm1over6.dat' u 1:2 	w lines 	  ls 6	title '$E_\mathrm{CI}$', \
-	'out_g-0.17' u 1:3 				w linespoints ls 2 	title '$E_\mathrm{RSPT2}$', \
-	'out_g-0.17' u 1:4 				w linespoints ls 3	title '$E_\mathrm{RSPT3}$', \
-	'out_g-0.17' u 1:5 				w linespoints ls 4 	title '$E_\mathrm{ENPT2}$', \
-	'out_g-0.17' u 1:6 				w linespoints ls 5	title '$E_\mathrm{ENPT3}$';
+    'out_g-0.17' u 1:2              w linespoints   ls 1    title '$E_\mathrm{GP}$', \
+    'jakob/outgm1over6.dat' u 1:2   w lines         ls 6    title '$E_\mathrm{FCI}$', \
+    'out_g-0.17' u 1:3              w linespoints   ls 2    title '$E_\mathrm{RSPT2}$', \
+    'out_g-0.17' u 1:4              w linespoints   ls 3    title '$E_\mathrm{RSPT3}$', \
+    'out_g-0.17' u 1:5              w linespoints   ls 4    title '$E_\mathrm{ENPT2}$', \
+    'out_g-0.17' u 1:6              w linespoints   ls 5    title '$E_\mathrm{ENPT3}$';
 
 set xtics ('' 4, '' 8, '' 12, '' 16, '' 20, '' 24, '' 28, '' 32, '' 36, '' 40, '' 44, '' 48, '' 52, '' 56, '' 60, '' 64, '' 68, '' 72, '' 76, '' 80);
 unset xlabel;
@@ -46,12 +46,12 @@ set label 1 '$g = 1/6$' at graph 0.4, 0.5;
 unset key;
 @TMARGIN; @RMARGIN;
 plot \
-	'out_g0.17' u 1:2			w linespoints ls 1 	title '$E_\mathrm{GP}$', \
-	'jakob/outg1over6.dat' u 1:2 	w lines   ls 6	title '$E_\mathrm{CI}$', \
-	'out_g0.17' u 1:3 			w linespoints ls 2 	title '$E_\mathrm{RSPT2}$', \
-	'out_g0.17' u 1:4 			w linespoints ls 3	title '$E_\mathrm{RSPT3}$', \
-	'out_g0.17' u 1:5 			w linespoints ls 4 	title '$E_\mathrm{ENPT2}$', \
-	'out_g0.17' u 1:6 			w linespoints ls 5	title '$E_\mathrm{ENPT3}$';
+    'out_g0.17' u 1:2               w linespoints   ls 1    title '$E_\mathrm{GP}$', \
+    'jakob/outg1over6.dat' u 1:2    w lines         ls 6    title '$E_\mathrm{FCI}$', \
+    'out_g0.17' u 1:3               w linespoints   ls 2    title '$E_\mathrm{RSPT2}$', \
+    'out_g0.17' u 1:4               w linespoints   ls 3    title '$E_\mathrm{RSPT3}$', \
+    'out_g0.17' u 1:5               w linespoints   ls 4    title '$E_\mathrm{ENPT2}$', \
+    'out_g0.17' u 1:6               w linespoints   ls 5    title '$E_\mathrm{ENPT3}$';
 
 set xlabel 'Basis size (a.\,u.)';
 set ylabel 'Energy (a.\,u.)';
@@ -64,12 +64,12 @@ set label 1 '$g = -1/3$' at graph 0.4, 0.5;
 unset key;
 @BMARGIN; @LMARGIN;
 plot \
-	'out_g-0.33' u 1:2			w linespoints ls 1 	title '$E_\mathrm{GP}$', \
-	'jakob/outgm1over3.dat' u 1:2 	w lines   ls 6	title '$E_\mathrm{CI}$', \
-	'out_g-0.33' u 1:3 			w linespoints ls 2 	title '$E_\mathrm{RSPT2}$', \
-	'out_g-0.33' u 1:4 			w linespoints ls 3	title '$E_\mathrm{RSPT3}$', \
-	'out_g-0.33' u 1:5 			w linespoints ls 4 	title '$E_\mathrm{ENPT2}$', \
-	'out_g-0.33' u 1:6 			w linespoints ls 5	title '$E_\mathrm{ENPT3}$';
+    'out_g-0.33' u 1:2              w linespoints   ls 1    title '$E_\mathrm{GP}$', \
+    'jakob/outgm1over3.dat' u 1:2   w lines         ls 6    title '$E_\mathrm{FCI}$', \
+    'out_g-0.33' u 1:3              w linespoints   ls 2    title '$E_\mathrm{RSPT2}$', \
+    'out_g-0.33' u 1:4              w linespoints   ls 3    title '$E_\mathrm{RSPT3}$', \
+    'out_g-0.33' u 1:5              w linespoints   ls 4    title '$E_\mathrm{ENPT2}$', \
+    'out_g-0.33' u 1:6              w linespoints   ls 5    title '$E_\mathrm{ENPT3}$';
 
 set xlabel 'Basis size (a.\,u.)';
 set xtics ('4' 4, '' 8, '' 12, '16' 16, '' 20, '' 24, '' 28, '32' 32, '' 36, '' 40, '' 44, '48' 48, '' 52, '' 56, '' 60, '64' 64, '' 68, '' 72, '' 76, '80' 80);
@@ -86,11 +86,9 @@ set label 1 '$g = 1/3$' at graph 0.4, 0.5;
 unset ylabel;
 @BMARGIN; @RMARGIN;
 plot \
-	'out_g0.33' u 1:2			w linespoints ls 1 	title '$E_\mathrm{GP}$', \
-	'jakob/outg1over3.dat' u 1:2 	w lines   ls 6	title '$E_\mathrm{CI}$', \
-	'out_g0.33' u 1:3 			w linespoints ls 2 	title '$E_\mathrm{RSPT2}$', \
-	'out_g0.33' u 1:4 			w linespoints ls 3	title '$E_\mathrm{RSPT3}$', \
-	'out_g0.33' u 1:5 			w linespoints ls 4 	title '$E_\mathrm{ENPT2}$', \
-	'out_g0.33' u 1:6 			w linespoints ls 5	title '$E_\mathrm{ENPT3}$';
-
-	#2.713319038091934 lw 3 lc 2 title '$E_\mathrm{CI}$'
+    'out_g0.33' u 1:2               w linespoints   ls 1    title '$E_\mathrm{GP}$', \
+    'jakob/outg1over3.dat' u 1:2    w lines         ls 6    title '$E_\mathrm{FCI}$', \
+    'out_g0.33' u 1:3               w linespoints   ls 2    title '$E_\mathrm{RSPT2}$', \
+    'out_g0.33' u 1:4               w linespoints   ls 3    title '$E_\mathrm{RSPT3}$', \
+    'out_g0.33' u 1:5               w linespoints   ls 4    title '$E_\mathrm{ENPT2}$', \
+    'out_g0.33' u 1:6               w linespoints   ls 5    title '$E_\mathrm{ENPT3}$';

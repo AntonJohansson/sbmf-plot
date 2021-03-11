@@ -1,9 +1,11 @@
 set term epslatex;
-set output 'imgs/gp_gauss_W.eps';
+set output 'imgs/gp_gauss_W_smaller_gaussian.eps';
 
-set size 0.75,0.75;
+set size 0.65,0.65;
 set key at graph 0.99, 0.95;
 set key spacing 1.5;
+
+set format y '%.1f'
 
 set style line 1 lw 3 lt 1       lc rgb '#000000'; # Potential
 set style line 2 lw 3 lt 1       lc rgb '#b80707'; # SYM Energy

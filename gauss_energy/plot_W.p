@@ -5,7 +5,7 @@ set size 1,1;
 #set key at graph 0.95, 0.95
 
 set format y '%.2f'
-set yrange [1.01:1.065];
+set yrange [0.948:1.0025];
 set ylabel 'Energy per particle (a.\,u.)';
 set xlabel 'Particle count $N$ (a.\,u.)';
 

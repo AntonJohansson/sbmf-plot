@@ -29,21 +29,13 @@ set ylabel offset 0,-4;
 set multiplot layout 2,2;
 
 set yrange [-1:0.085];
-set ytics ('-0.8' -0.8, '' -0.6, '-0.4' -0.4, '' -0.2, '0.0' 0)
+set ytics -0.8,0.4,0
+set mytics 2
 set xrange [-8:172];
 set format y '%.1f';
 
-set xtics (      \
-''     0,      \
-''    20,     \
-''    40,     \
-''    60,     \
-''    80,     \
-''    100,   \
-''    120, \
-''    140, \
-''    160 \
-)
+set xtics 0,40,160
+set mxtics 2
 
 set format x '';
 unset xlabel;
@@ -57,9 +49,9 @@ plot 0 w lines ls 7 title '', \
      'out_64_new/out_l-0.50' u 1:(100*($6-$2)/$2) w linespoints ls 5 title '$E_\mathrm{ENPT3}$';
 
 set format x '';
-set format y '%.1f';
-set yrange [-0.6:0.075];
-set ytics ( '' -0.5, '-0.4' -0.4, '' -0.3, '-0.2' -0.2, '' -0.1, '0.0' 0 )
+set yrange [-0.59:0.075];
+set ytics -0.6,0.2,0
+set mytics 2
 unset xlabel;
 unset ylabel;
 set label 1 '$\lambda = 0.5$' at graph 0.4, 0.5;
@@ -72,22 +64,10 @@ plot 0 w lines ls 7 title '', \
      'out_64_new/out_l0.50' u 1:(100*($6-$2)/$2) w linespoints ls 5 title '$E_\mathrm{ENPT3}$';
 
 set yrange [-0.06*100:0.01*100];
-set ytics ('-5.0' -5, '' -3.75, '-2.5' -2.5, '' -1.25, '0.0' 0)
-
-set xtic (      \
-'0'     0,      \
-''    20,     \
-'40'    40,     \
-''    60,     \
-'80'    80,     \
-''    100,   \
-'120'    120, \
-''    140, \
-'160'    160 \
-)
+set ytics -5,2.5,0
+set mytics 2
 
 set format x '%.0f'
-set format y '%.0f';
 set xlabel 'N (unitless)';
 set label 1 '$\lambda = -1.0$' at graph 0.4, 0.5;
 unset key;
@@ -99,10 +79,9 @@ plot 0 w lines ls 7 title '', \
      'out_64_new/out_l-1.00' u 1:(100*($6-$2)/$2) w linespoints ls 5 title '$E_\mathrm{ENPT3}$';
 
 
-set format y '%.1f';
 set yrange [-2.2:0.2];
-set ytics -2,0.5,0
-set ytics ('-2.0' -2, '' -1.5, '-1.0' -1, '' -0.5, '0.0' 0)
+set ytics -2,1,0
+set mytics 2
 set key at screen 0.8, 1.075;
 set key box;
 set key spacing 1.5;

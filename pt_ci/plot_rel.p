@@ -21,14 +21,13 @@ set multiplot layout 2,2;
 
 set ylabel '$(E_\mathrm{MBPT} - E_\mathrm{FCI})/E_\mathrm{FCI}$ (\textperthousand)';
 set ylabel offset 0,-4
-#set xtics ('' 4, '' 8, '' 12, '' 16, '' 20, '' 24, '' 28, '' 32, '' 36, '' 40, '' 44, '' 48, '' 52, '' 56, '' 60, '' 64, '' 68, '' 72, '' 76, '' 80);
-#set xtics ('' 4, '' 8, '' 12, '' 16, '' 20, '' 24, '' 28, '' 32, '' 36, '' 40, '' 44, '' 48, '' 52, '' 56, '' 60, '' 64)
 set xtics ('' 4, '' 16, '' 32, '' 48, '' 64)
 set xrange [-1:69]
 set yrange [-0.09:0.75]
-set ytics ('0.0' 0, '' 0.15, '0.3' 0.3, '' 0.45, '0.6' 0.6)
+set ytics 0,0.3,0.6
+set mytics 2
 unset xlabel;
-set format y '%.2f'
+set format y '%.1f'
 set label 1 '$\lambda = -0.5$' at graph 0.4, 0.70;
 unset key;
 @TMARGIN; @LMARGIN;
@@ -38,11 +37,10 @@ plot    0 w lines ls 7 title '', \
         'reldata/out_g-0.17' u 1:(scale*($5-$7)/$7) w linespoints ls 4 title '$E_\mathrm{ENPT2}$', \
         'reldata/out_g-0.17' u 1:(scale*($6-$7)/$7) w linespoints ls 5 title '$E_\mathrm{ENPT3}$';
 
-#set xtics ('' 4, '' 8, '' 12, '' 16, '' 20, '' 24, '' 28, '' 32, '' 36, '' 40, '' 44, '' 48, '' 52, '' 56, '' 60, '' 64, '' 68, '' 72, '' 76, '' 80);
-#set xtics ('' 4, '' 8, '' 12, '' 16, '' 20, '' 24, '' 28, '' 32, '' 36, '' 40, '' 44, '' 48, '' 52, '' 56, '' 60, '' 64)
 set xtics ('' 4, '' 16, '' 32, '' 48, '' 64)
 set yrange [-0.47:0.1]
-set ytics ('-0.4' -0.4, '' -0.3, '-0.2' -0.2, '' -0.1, '0.0' 0.0)
+set ytics -0.4,0.2,0
+set mytics 2
 unset xlabel;
 unset ylabel;
 unset key;
@@ -55,10 +53,10 @@ plot    0 w lines ls 7 title '', \
         'reldata/out_g0.17' u 1:(scale*($6-$7)/$7) w linespoints ls 5 title '$E_\mathrm{ENPT3}$';
 
 set xlabel 'Basis size (unitless)';
-#set xtics ('4' 4, '' 8, '' 12, '16' 16, '' 20, '' 24, '' 28, '32' 32, '' 36, '' 40, '' 44, '48' 48, '' 52, '' 56, '' 60, '64' 64, '' 68, '' 72, '' 76, '80' 80);
 set xtics ('4' 4, '16' 16, '32' 32, '48' 48, '64' 64)
 set yrange [-1:8.5]
-set ytics ('0.0' 0, '' 1.5 , '3.0' 3, '' 4.5, '6.0' 6, '' 7.5)
+set ytics 0,3,9
+set mytics 2
 set label 1 '$\lambda = -1$' at graph 0.4, 0.70;
 unset key;
 @BMARGIN; @LMARGIN;
@@ -70,8 +68,9 @@ plot    0 w lines ls 7 title '', \
 
 #set xtics ('4' 4, '' 8, '' 12, '16' 16, '' 20, '' 24, '' 28, '32' 32, '' 36, '' 40, '' 44, '48' 48, '' 52, '' 56, '' 60, '64' 64, '' 68, '' 72, '' 76, '80' 80);
 set xtics ('4' 4, '16' 16, '32' 32, '48' 48, '64' 64)
-set yrange [-3.2:1.2]
-set ytics ('' -3, '-2.4' -2.4, '' -1.8, '-1.2' -1.2, '' -0.6, '0.0' 0.0, '' 0.6)
+set yrange [-3.2:1.18]
+set ytics -2.4,1.2,1.2
+set mytics 2
 
 set key at screen 0.8, 1.19;
 set key box;

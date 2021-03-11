@@ -60,8 +60,8 @@ set yrange [-0.59:0.25]
 set ytics -0.6,0.2,0.2
 set mytics 2
 
-set style line 3 lw 3           lc rgb '#162E53'
-set style line 5 lw 3           lc rgb '#DB9C00'
+#set style line 3 lw 3           lc rgb '#162E53'
+#set style line 5 lw 3           lc rgb '#DB9C00'
 
 @TMARGIN; @RMARGIN
 #plot 0 w lines ls 7 title '', \

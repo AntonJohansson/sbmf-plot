@@ -16,62 +16,64 @@ set style line 6 lw 2           lc rgb '#E83400'
 
 set size 1,1.15;
 
-set multiplot layout 2,2;
+#set multiplot layout 2,2;
 scale = 100
 
-set xrange [0:500]
+set xrange [200:2000]
 set format y '%.3f'
 
 set ylabel 'Energy (a.\,u.)';
 unset xlabel;
 set format y '%.3f'
 set label 1 '$\omega = 0.025$' at graph 0.4, 0.5;
-set format x ''
+#set format x ''
 unset key;
 @TMARGIN; @LMARGIN;
 plot \
-         'out_0.025000' u 1:(scale*($3-$2)/$2)  w linespoints ls 2  title '$E_\mathrm{RSPT2}$', \
-         'out_0.025000' u 1:(scale*($4-$2)/$2)  w linespoints ls 3  title '$E_\mathrm{RSPT3}$', \
-         'out_0.025000' u 1:(scale*($5-$2)/$2)  w linespoints ls 4  title '$E_\mathrm{ENPT2}$', \
-         'out_0.025000' u 1:(scale*($6-$2)/$2)  w linespoints ls 5  title '$E_\mathrm{ENPT3}$';
+         'out_0.050000_gab_-0.700000' u 1:(scale*($4-$2)/$2)  w linespoints ls 3  title '$E_\mathrm{RSPT3,1}$', \
+         'out_0.050000_gab_-0.700000' u 1:(scale*($6-$2)/$2)  w linespoints ls 5  title '$E_\mathrm{ENPT3,1}$', \
+         'out_0.050000_gab_-0.800000' u 1:(scale*($4-$2)/$2)  w linespoints ls 3  title '$E_\mathrm{RSPT3,2}$', \
+         'out_0.050000_gab_-0.800000' u 1:(scale*($6-$2)/$2)  w linespoints ls 5  title '$E_\mathrm{ENPT3,2}$', \
+         'out_0.050000_gab_-0.900000' u 1:(scale*($4-$2)/$2)  w linespoints ls 3  title '$E_\mathrm{RSPT3,3}$', \
+         'out_0.050000_gab_-0.900000' u 1:(scale*($6-$2)/$2)  w linespoints ls 5  title '$E_\mathrm{ENPT3,3}$', \
 
-unset xlabel;
-unset ylabel;
-unset key;
-set label 1 '$\omega = 0.05$' at graph 0.4, 0.5;
-@TMARGIN; @RMARGIN;
-plot \
-         'out_0.050000' u 1:(scale*($3-$2)/$2)  w linespoints ls 2  title '$E_\mathrm{RSPT2}$', \
-         'out_0.050000' u 1:(scale*($4-$2)/$2)  w linespoints ls 3  title '$E_\mathrm{RSPT3}$', \
-         'out_0.050000' u 1:(scale*($5-$2)/$2)  w linespoints ls 4  title '$E_\mathrm{ENPT2}$', \
-         'out_0.050000' u 1:(scale*($6-$2)/$2)  w linespoints ls 5  title '$E_\mathrm{ENPT3}$';
+#unset xlabel;
+#unset ylabel;
+#unset key;
+#set label 1 '$\omega = 0.05$' at graph 0.4, 0.5;
+#@TMARGIN; @RMARGIN;
+#plot \
+#         'out_0.050000' u 1:(scale*($3-$2)/$2)  w linespoints ls 2  title '$E_\mathrm{RSPT2}$', \
+#         'out_0.050000' u 1:(scale*($4-$2)/$2)  w linespoints ls 3  title '$E_\mathrm{RSPT3}$', \
+#         'out_0.050000' u 1:(scale*($5-$2)/$2)  w linespoints ls 4  title '$E_\mathrm{ENPT2}$', \
+#         'out_0.050000' u 1:(scale*($6-$2)/$2)  w linespoints ls 5  title '$E_\mathrm{ENPT3}$';
+#
+#set xlabel 'Basis size (a.\,u.)';
+#set ylabel 'Energy (a.\,u.)';
+#set format y '%.3f'
+#set label 1 '$\omega = 0.1$' at graph 0.4, 0.5;
+#set format x '%.0f'
+#unset key;
+#@BMARGIN; @LMARGIN;
+#plot \
+#         'out_0.100000' u 1:(scale*($3-$2)/$2)  w linespoints ls 2  title '$E_\mathrm{RSPT2}$', \
+#         'out_0.100000' u 1:(scale*($4-$2)/$2)  w linespoints ls 3  title '$E_\mathrm{RSPT3}$', \
+#         'out_0.100000' u 1:(scale*($5-$2)/$2)  w linespoints ls 4  title '$E_\mathrm{ENPT2}$', \
+#         'out_0.100000' u 1:(scale*($6-$2)/$2)  w linespoints ls 5  title '$E_\mathrm{ENPT3}$';
 
-set xlabel 'Basis size (a.\,u.)';
-set ylabel 'Energy (a.\,u.)';
-set format y '%.3f'
-set label 1 '$\omega = 0.1$' at graph 0.4, 0.5;
-set format x '%.0f'
-unset key;
-@BMARGIN; @LMARGIN;
-plot \
-         'out_0.100000' u 1:(scale*($3-$2)/$2)  w linespoints ls 2  title '$E_\mathrm{RSPT2}$', \
-         'out_0.100000' u 1:(scale*($4-$2)/$2)  w linespoints ls 3  title '$E_\mathrm{RSPT3}$', \
-         'out_0.100000' u 1:(scale*($5-$2)/$2)  w linespoints ls 4  title '$E_\mathrm{ENPT2}$', \
-         'out_0.100000' u 1:(scale*($6-$2)/$2)  w linespoints ls 5  title '$E_\mathrm{ENPT3}$';
-
-set xlabel 'Basis size (a.\,u.)';
-set format y '%.3f'
-set key at screen 0.925, 1.075;
-set key box;
-set key maxrows 2;
-#set key outside right;
-set key spacing 1.5;
-#set key at graph 1.0,0.975;
-set label 1 '$\omega = 0.15$' at graph 0.4, 0.5;
-unset ylabel;
-@BMARGIN; @RMARGIN;
-plot \
-         'out_0.150000' u 1:(scale*($3-$2)/$2)  w linespoints ls 2  title '$E_\mathrm{RSPT2}$', \
-         'out_0.150000' u 1:(scale*($4-$2)/$2)  w linespoints ls 3  title '$E_\mathrm{RSPT3}$', \
-         'out_0.150000' u 1:(scale*($5-$2)/$2)  w linespoints ls 4  title '$E_\mathrm{ENPT2}$', \
-         'out_0.150000' u 1:(scale*($6-$2)/$2)  w linespoints ls 5  title '$E_\mathrm{ENPT3}$';
+#set xlabel 'Basis size (a.\,u.)';
+#set format y '%.3f'
+#set key at screen 0.925, 1.075;
+#set key box;
+#set key maxrows 2;
+##set key outside right;
+#set key spacing 1.5;
+##set key at graph 1.0,0.975;
+#set label 1 '$\omega = 0.15$' at graph 0.4, 0.5;
+#unset ylabel;
+#@BMARGIN; @RMARGIN;
+#plot \
+#         'out_0.150000' u 1:(scale*($3-$2)/$2)  w linespoints ls 2  title '$E_\mathrm{RSPT2}$', \
+#         'out_0.150000' u 1:(scale*($4-$2)/$2)  w linespoints ls 3  title '$E_\mathrm{RSPT3}$', \
+#         'out_0.150000' u 1:(scale*($5-$2)/$2)  w linespoints ls 4  title '$E_\mathrm{ENPT2}$', \
+#         'out_0.150000' u 1:(scale*($6-$2)/$2)  w linespoints ls 5  title '$E_\mathrm{ENPT3}$';

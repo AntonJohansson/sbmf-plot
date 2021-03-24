@@ -68,7 +68,7 @@ set ytics -5,2.5,0
 set mytics 2
 
 set format x '%.0f'
-set xlabel 'N (unitless)';
+set xlabel '$N$ (unitless)';
 set label 1 '$\lambda = -1.0$' at graph 0.4, 0.5;
 unset key;
 @BMARGIN; @LMARGIN;

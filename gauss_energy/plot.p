@@ -40,15 +40,15 @@ set label 2 front at screen 0.72, 0.65 '\footnotesize{\textbf{Asymmetric state}}
 
 plot  \
      NaN title ' ' lt -3, \
-     'out_default_E' u 1:($3/$1) w linespoints ls 1 title '\footnotesize{GP}', \
+     'out_default_E' u 1:($3/$1) w linespoints ls 1 ps 1.5 title '\footnotesize{GP}', \
      'out_default_E' u 1:($5/$1):(($6-($5-$6))/$1) w filledcurve fc rgb '#fce19c' title '', \
      'out_default_E' u 1:($7/$1):(($8-($7-$8))/$1) w filledcurve fc rgb '#fce19c' title '', \
-     'out_default_E' u 1:($6/$1) w linespoints ls 3 title '\footnotesize{RSPT3}', \
-     'out_default_E' u 1:($8/$1) w linespoints ls 5 title '\footnotesize{ENPT3}', \
+     'out_default_E' u 1:($6/$1) w linespoints ls 3 ps 1.5 title '\footnotesize{RSPT3}', \
+     'out_default_E' u 1:($8/$1) w linespoints ls 5 ps 1.5 title '\footnotesize{ENPT3}', \
      NaN title ' ' lt -3, \
      NaN title ' ' lt -3, \
      'out_random_E'  u 1:($5/$1):(($6-($5-$6))/$1) w filledcurve fc rgb '#B3C2DC' title '', \
      'out_random_E'  u 1:($7/$1):(($8-($7-$8))/$1) w filledcurve fc rgb '#B3C2DC' title '', \
-     'out_random_E'  u 1:($3/$1) w linespoints ls 6  title '\footnotesize{GP}', \
-     'out_random_E'  u 1:($6/$1) w linespoints ls 8  title '\footnotesize{RSPT3}', \
-     'out_random_E'  u 1:($8/$1) w linespoints ls 10 title '\footnotesize{ENPT3}';
+     'out_random_E'  u 1:($3/$1) w linespoints ls 6  ps 1.5 title '\footnotesize{GP}', \
+     'out_random_E'  u 1:($6/$1) w linespoints ls 8  ps 1.5 title '\footnotesize{RSPT3}', \
+     'out_random_E'  u 1:($8/$1) w linespoints ls 10 ps 1.5 title '\footnotesize{ENPT3}';

@@ -16,6 +16,12 @@ set ylabel '$|\phi_0|^2/N$ (unitless)';
 set xlabel '$x$ (a.\,u.)';
 set xrange [-3:3];
 set ytics 0,0.2,1
-set yrange [0:1.1];
-plot 'out_W' u 1:3 w lines ls 2 dt 4 title '\footnotesize{Symmetric state}', \
-     'out_W' u 1:4 w lines ls 3 dt 6 title '\footnotesize{Asymmetric state}';
+set yrange [0:1.1]
+
+#set multiplot layout 1, 2
+
+plot 'out_W_N4' u 1:3 w lines ls 2      title '\footnotesize{Symmetric state}', \
+     'out_W_N4' u 1:4 w lines ls 3 dt 4 title '\footnotesize{Asymmetric state}', \
+
+#plot 'out_W_N115' u 1:4 w lines ls 2 dt 4 title '\footnotesize{Symmetric state}', \
+#     'out_W_N125' u 1:4 w lines ls 2 dt 4 title '\footnotesize{Symmetric state}', \

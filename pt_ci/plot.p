@@ -6,10 +6,10 @@ LMARGIN = "set lmargin at screen 0.15; set rmargin at screen 0.49";
 RMARGIN = "set lmargin at screen 0.61; set rmargin at screen 0.95";
 
 set style line 1 lw 2           lc rgb '#00863E'
-set style line 2 lw 2   dt 2    lc rgb '#E87E00'
-set style line 3 lw 2           lc rgb '#E87E00'
-set style line 4 lw 2   dt 2    lc rgb '#037DBF'
-set style line 5 lw 2           lc rgb '#037DBF'
+set style line 2 lw 2 ps 1.5 pt 6 dt 2    lc rgb '#E87E00'
+set style line 3 lw 2 ps 1.5 pt 7         lc rgb '#E87E00'
+set style line 4 lw 2 ps 1.5  dt 2    lc rgb '#037DBF'
+set style line 5 lw 2 ps 1.5          lc rgb '#037DBF'
 set style line 6 lw 2           lc rgb '#E83400'
 
 set term epslatex;

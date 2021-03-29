@@ -8,9 +8,9 @@ LMARGIN = "set lmargin at screen 0.15; set rmargin at screen 0.50";
 RMARGIN = "set lmargin at screen 0.60; set rmargin at screen 0.95";
 
 set style line 2 lw 3   dt 2    lc rgb '#EE706A'
-set style line 3 lw 3           lc rgb '#890F08'
+set style line 3 ps 1.25 pt 7 lw 3           lc rgb '#890F08'
 set style line 4 lw 3   dt 2    lc rgb '#4E9D5C'
-set style line 5 lw 3           lc rgb '#01400C'
+set style line 5 ps 1.25 lw 3           lc rgb '#01400C'
 set style line 7 lw 3           lc rgb '#888888'
 
 set style line 1 lw 2           lc rgb '#00863E'

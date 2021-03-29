@@ -4,10 +4,10 @@ BMARGIN = "set tmargin at screen 0.60; set bmargin at screen 0.20";
 LMARGIN = "set lmargin at screen 0.15; set rmargin at screen 0.49";
 RMARGIN = "set lmargin at screen 0.61; set rmargin at screen 0.95";
 
-set style line 2 lw 3   dt 2    lc rgb '#EE706A'
-set style line 3 lw 3           lc rgb '#890F08'
-set style line 4 lw 3   dt 2    lc rgb '#4E9D5C'
-set style line 5 lw 3           lc rgb '#01400C'
+set style line 2 lw 3 ps 1.25 pt 6 dt 2               lc rgb '#EE706A'
+set style line 3 lw 3 ps 1.25 pt 7          lc rgb '#890F08'
+set style line 4 lw 3 ps 1.25 dt 2    lc rgb '#4E9D5C'
+set style line 5 lw 3 ps 1.25          lc rgb '#01400C'
 set style line 7 lw 3           lc rgb '#444444'
 
 scale = 1000

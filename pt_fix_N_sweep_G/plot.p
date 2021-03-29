@@ -1,5 +1,5 @@
-#set term epslatex size 5.5,3.5
-#set output 'imgs/gp_pt_sweep_G.eps';
+set term epslatex size 5.5,3.5
+set output 'imgs/gp_pt_sweep_G.eps';
 
 set macros;
 LMARGIN = "set lmargin at screen 0.15;  set rmargin at screen 0.45";
@@ -42,10 +42,10 @@ set xlabel '$\lambda$ (unitless)';
 
 @TMARGIN; @LMARGIN
 plot 0 w lines ls 7 title '', \
-     'out' u 1:(scale*$5/$2) w linespoints ls 2 title '\footnotesize{RSPT2}', \
-     'out' u 1:(scale*$6/$2) w linespoints ls 3 title '\footnotesize{RSPT3}', \
-     'out' u 1:(scale*$7/$2) w linespoints ls 4 title '\footnotesize{ENPT2}', \
-     'out' u 1:(scale*$8/$2) w linespoints ls 5 title '\footnotesize{ENPT3}';
+     'out' u 1:(scale*$5/$2) w linespoints ls 2 ps 1.25 pt 6 title '\footnotesize{RSPT2}', \
+     'out' u 1:(scale*$6/$2) w linespoints ls 3 ps 1.25 pt 7 title '\footnotesize{RSPT3}', \
+     'out' u 1:(scale*$7/$2) w linespoints ls 4 ps 1.25 title '\footnotesize{ENPT2}', \
+     'out' u 1:(scale*$8/$2) w linespoints ls 5 ps 1.25 title '\footnotesize{ENPT3}';
 
 set key at graph 0.75, 0.40;
 
@@ -56,7 +56,7 @@ set ylabel '$(E_\mathrm{MBPT2} - E_\mathrm{MBPT3})/E_\mathrm{MBPT3}$ (\%)';
 #set ylabel offset 1,0
 set format y '%.1f';
 
-#set yrange [-0.59:0.25]
+set yrange [-0.59:0.25]
 set ytics -0.6,0.2,0.2
 set mytics 2
 
@@ -69,12 +69,12 @@ set mytics 2
 #     'out' u 1:(10*$6) w linespoints ls 3 title '$E_\mathrm{RSPT3}$', \
 #     'out' u 1:(10*$7) w linespoints ls 4 title '$E_\mathrm{ENPT2}$', \
 #     'out' u 1:(10*$8) w linespoints ls 5 title '$E_\mathrm{ENPT3}$';
-#plot 0 w lines ls 7 title '', \
-#     'out' u 1:((($6-$5)/$6)) w linespoints ls 3 title '\footnotesize{RSPT}', \
-#     'out' u 1:((($8-$7)/$8)) w linespoints ls 5 title '\footnotesize{ENPT}'
-set xrange [0:2]
 plot 0 w lines ls 7 title '', \
-     'out' u 1:((($5))) w linespoints ls 2 title '', \
-     'out' u 1:((($6))) w linespoints ls 3 title '', \
-     'out' u 1:((($7))) w linespoints ls 4 title '', \
-     'out' u 1:((($8))) w linespoints ls 5 title '', \
+     'out' u 1:((($6-$5)/$6)) w linespoints ls 3 ps 1.25 pt 7 title '\footnotesize{RSPT}', \
+     'out' u 1:((($8-$7)/$8)) w linespoints ls 5 ps 1.25 title '\footnotesize{ENPT}'
+#set xrange [0:2]
+#plot 0 w lines ls 7 title '', \
+#     'out' u 1:((($5))) w linespoints ls 2 ps 1.5 title '', \
+#     'out' u 1:((($6))) w linespoints ls 3 ps 1.5 title '', \
+#     'out' u 1:((($7))) w linespoints ls 4 ps 1.5 title '', \
+#     'out' u 1:((($8))) w linespoints ls 5 ps 1.5 title '', \

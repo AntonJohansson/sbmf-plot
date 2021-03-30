@@ -17,8 +17,7 @@ set style line 10   lw 3       lc rgb '#2D7598'; # ASYM ENPT3
 # 12,13 enpt random
 set xrange [40:75]
 plot \
-    'out' u 1:(($7 -$2)/$2) w linespoints,\
-    'out' u 1:(($9 -$2)/$2) w linespoints,\
-    'out' u 1:(($4 -$2)/$2) w linespoints lc black, \
-    'out' u 1:(($11-$2)/$2) w linespoints, \
-    'out' u 1:(($13-$2)/$2) w linespoints
+    'out' u 1:(($7 )/$1) w linespoints,\
+    'out' u 1:(($4 )/$1) w linespoints lc black, \
+    'out' u 1:(($11)/$1) w linespoints, \
+    'out' u 1:(($13)/$1) w linespoints

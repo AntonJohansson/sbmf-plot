@@ -19,7 +19,7 @@ set size 1,1.2;
 
 set multiplot layout 2,2;
 
-set ylabel '$(E_\mathrm{MBPT} - E_\mathrm{FCI})/E_\mathrm{FCI}$ (\textperthousand)';
+set ylabel '$|(E_\mathrm{MBPT} - E_\mathrm{FCI})/E_\mathrm{FCI}|$ (\textperthousand)';
 set ylabel offset 0,-4
 set xtics ('' 4, '' 16, '' 32, '' 48, '' 64, '' 80)
 set xrange [-1:85]
@@ -38,19 +38,19 @@ plot    0 w lines ls 7 title '', \
         'reldata/out_g-0.17' u 1:(scale*($6-$7)/$7) w linespoints ls 5 title '\footnotesize{ENPT3}';
 
 set xtics ('' 4, '' 16, '' 32, '' 48, '' 64, '' 80)
-set yrange [-0.47:0.1]
-set ytics -0.4,0.2,0
+set yrange [-0.05:0.47]
+set ytics 0.0,0.2,0.4
 set mytics 2
 unset xlabel;
 unset ylabel;
 unset key;
-set label 1 '$\lambda = 0.5$' at graph 0.4, 0.35;
+set label 1 '$\lambda = 0.5$' at graph 0.4, 0.70;
 @TMARGIN; @RMARGIN;
 plot    0 w lines ls 7 title '', \
-        'reldata/out_g0.17' u 1:(scale*($3-$7)/$7) w linespoints ls 2 title '\footnotesize{RSPT2}', \
-        'reldata/out_g0.17' u 1:(scale*($4-$7)/$7) w linespoints ls 3 title '\footnotesize{RSPT3}', \
-        'reldata/out_g0.17' u 1:(scale*($5-$7)/$7) w linespoints ls 4 title '\footnotesize{ENPT2}', \
-        'reldata/out_g0.17' u 1:(scale*($6-$7)/$7) w linespoints ls 5 title '\footnotesize{ENPT3}';
+        'reldata/out_g0.17' u 1:(abs(scale*($3-$7)/$7)) w linespoints ls 2 title '\footnotesize{RSPT2}', \
+        'reldata/out_g0.17' u 1:(abs(scale*($4-$7)/$7)) w linespoints ls 3 title '\footnotesize{RSPT3}', \
+        'reldata/out_g0.17' u 1:(abs(scale*($5-$7)/$7)) w linespoints ls 4 title '\footnotesize{ENPT2}', \
+        'reldata/out_g0.17' u 1:(abs(scale*($6-$7)/$7)) w linespoints ls 5 title '\footnotesize{ENPT3}';
 
 set xlabel 'Basis size (unitless)';
 set xtics ('4' 4, '16' 16, '32' 32, '48' 48, '64' 64, '80' 80)
@@ -68,8 +68,9 @@ plot    0 w lines ls 7 title '', \
 
 #set xtics ('4' 4, '' 8, '' 12, '16' 16, '' 20, '' 24, '' 28, '32' 32, '' 36, '' 40, '' 44, '48' 48, '' 52, '' 56, '' 60, '64' 64, '' 68, '' 72, '' 76, '80' 80);
 set xtics ('4' 4, '16' 16, '32' 32, '48' 48, '64' 64, '80' 80)
-set yrange [-3.2:1.18]
+set yrange [-0.4:3.2]
 set ytics -2.4,1.2,1.2
+set ytics 0,1.2,2.4
 set mytics 2
 
 set key at screen 0.8, 1.19;
@@ -77,11 +78,11 @@ set key box;
 set key maxrows 2;
 set key spacing 1.5;
 
-set label 1 '$\lambda = 1$' at graph 0.4, 0.30;
+set label 1 '$\lambda = 1$' at graph 0.4, 0.70;
 unset ylabel;
 @BMARGIN; @RMARGIN;
 plot    0 w lines ls 7 title '', \
-        'reldata/out_g0.33' u 1:(scale*($3-$7)/$7) w linespoints ls 2 title '\footnotesize{RSPT2}', \
-        'reldata/out_g0.33' u 1:(scale*($4-$7)/$7) w linespoints ls 3 title '\footnotesize{RSPT3}', \
-        'reldata/out_g0.33' u 1:(scale*($5-$7)/$7) w linespoints ls 4 title '\footnotesize{ENPT2}', \
-        'reldata/out_g0.33' u 1:(scale*($6-$7)/$7) w linespoints ls 5 title '\footnotesize{ENPT3}';
+        'reldata/out_g0.33' u 1:(abs(scale*($3-$7)/$7)) w linespoints ls 2 title '\footnotesize{RSPT2}', \
+        'reldata/out_g0.33' u 1:(abs(scale*($4-$7)/$7)) w linespoints ls 3 title '\footnotesize{RSPT3}', \
+        'reldata/out_g0.33' u 1:(abs(scale*($5-$7)/$7)) w linespoints ls 4 title '\footnotesize{ENPT2}', \
+        'reldata/out_g0.33' u 1:(abs(scale*($6-$7)/$7)) w linespoints ls 5 title '\footnotesize{ENPT3}';

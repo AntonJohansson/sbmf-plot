@@ -22,16 +22,15 @@ set term epslatex;
 set output 'imgs/gp_pt_sweep_N.eps';
 
 set size 1,1.125;
-#set logscale x;
 
-set ylabel '$(E_\mathrm{MBPT} - E_\mathrm{GP})/E_\mathrm{GP}$ (\%)';
+set ylabel '$|(E_\mathrm{MBPT} - E_\mathrm{GP})/E_\mathrm{GP}|$ (\%)';
 set ylabel offset 0,-4;
 set multiplot layout 2,2;
 
-set yrange [-1:0.085];
+#set yrange [-1:0.085];
 set ytics -0.8,0.4,0
 set mytics 2
-set xrange [-8:172];
+#set xrange [-8:172];
 set format y '%.1f';
 
 set xtics 0,40,160
@@ -43,13 +42,13 @@ set label 1 '$\lambda = -0.5$' at graph 0.4, 0.5;
 unset key;
 @TMARGIN; @LMARGIN;
 plot 0 w lines ls 7 title '', \
-     'out_64_new/out_l-0.50' u 1:(100*($3-$2)/$2) w linespoints ls 2 title '$E_\mathrm{RSPT2}$', \
-     'out_64_new/out_l-0.50' u 1:(100*($4-$2)/$2) w linespoints ls 3 title '$E_\mathrm{RSPT3}$', \
-     'out_64_new/out_l-0.50' u 1:(100*($5-$2)/$2) w linespoints ls 4 title '$E_\mathrm{ENPT2}$', \
-     'out_64_new/out_l-0.50' u 1:(100*($6-$2)/$2) w linespoints ls 5 title '$E_\mathrm{ENPT3}$';
+     'out_64_new/out_l-0.50' u 1:(abs(100*($3-$2)/$2)) w linespoints ls 2 title '$E_\mathrm{RSPT2}$', \
+     'out_64_new/out_l-0.50' u 1:(abs(100*($4-$2)/$2)) w linespoints ls 3 title '$E_\mathrm{RSPT3}$', \
+     'out_64_new/out_l-0.50' u 1:(abs(100*($5-$2)/$2)) w linespoints ls 4 title '$E_\mathrm{ENPT2}$', \
+     'out_64_new/out_l-0.50' u 1:(abs(100*($6-$2)/$2)) w linespoints ls 5 title '$E_\mathrm{ENPT3}$';
 
 set format x '';
-set yrange [-0.59:0.075];
+#set yrange [-0.59:0.075];
 set ytics -0.6,0.2,0
 set mytics 2
 unset xlabel;
@@ -58,12 +57,12 @@ set label 1 '$\lambda = 0.5$' at graph 0.4, 0.5;
 unset key;
 @TMARGIN; @RMARGIN;
 plot 0 w lines ls 7 title '', \
-     'out_64_new/out_l0.50' u 1:(100*($3-$2)/$2) w linespoints ls 2 title '$E_\mathrm{RSPT2}$', \
-     'out_64_new/out_l0.50' u 1:(100*($4-$2)/$2) w linespoints ls 3 title '$E_\mathrm{RSPT3}$', \
-     'out_64_new/out_l0.50' u 1:(100*($5-$2)/$2) w linespoints ls 4 title '$E_\mathrm{ENPT2}$', \
-     'out_64_new/out_l0.50' u 1:(100*($6-$2)/$2) w linespoints ls 5 title '$E_\mathrm{ENPT3}$';
+     'out_64_new/out_l0.50' u 1:(abs(100*($3-$2)/$2)) w linespoints ls 2 title '$E_\mathrm{RSPT2}$', \
+     'out_64_new/out_l0.50' u 1:(abs(100*($4-$2)/$2)) w linespoints ls 3 title '$E_\mathrm{RSPT3}$', \
+     'out_64_new/out_l0.50' u 1:(abs(100*($5-$2)/$2)) w linespoints ls 4 title '$E_\mathrm{ENPT2}$', \
+     'out_64_new/out_l0.50' u 1:(abs(100*($6-$2)/$2)) w linespoints ls 5 title '$E_\mathrm{ENPT3}$';
 
-set yrange [-0.06*100:0.01*100];
+#set yrange [-0.06*100:0.01*100];
 set ytics -5,2.5,0
 set mytics 2
 
@@ -73,13 +72,13 @@ set label 1 '$\lambda = -1.0$' at graph 0.4, 0.5;
 unset key;
 @BMARGIN; @LMARGIN;
 plot 0 w lines ls 7 title '', \
-     'out_64_new/out_l-1.00' u 1:(100*($3-$2)/$2) w linespoints ls 2 title '$E_\mathrm{RSPT2}$', \
-     'out_64_new/out_l-1.00' u 1:(100*($4-$2)/$2) w linespoints ls 3 title '$E_\mathrm{RSPT3}$', \
-     'out_64_new/out_l-1.00' u 1:(100*($5-$2)/$2) w linespoints ls 4 title '$E_\mathrm{ENPT2}$', \
-     'out_64_new/out_l-1.00' u 1:(100*($6-$2)/$2) w linespoints ls 5 title '$E_\mathrm{ENPT3}$';
+     'out_64_new/out_l-1.00' u 1:(abs(100*($3-$2)/$2)) w linespoints ls 2 title '$E_\mathrm{RSPT2}$', \
+     'out_64_new/out_l-1.00' u 1:(abs(100*($4-$2)/$2)) w linespoints ls 3 title '$E_\mathrm{RSPT3}$', \
+     'out_64_new/out_l-1.00' u 1:(abs(100*($5-$2)/$2)) w linespoints ls 4 title '$E_\mathrm{ENPT2}$', \
+     'out_64_new/out_l-1.00' u 1:(abs(100*($6-$2)/$2)) w linespoints ls 5 title '$E_\mathrm{ENPT3}$';
 
 
-set yrange [-2.2:0.2];
+#set yrange [-2.2:0.2];
 set ytics -2,1,0
 set mytics 2
 set key at screen 0.8, 1.075;
@@ -91,7 +90,7 @@ dummy = "NaN title ' ' lt -3";
 unset ylabel;
 @BMARGIN; @RMARGIN;
 plot 0 w lines ls 7 title '', \
-     'out_64_new/out_l1.00' u 1:(100*($3-$2)/$2) w linespoints ls 2 title '\footnotesize{RSPT2}', \
-     'out_64_new/out_l1.00' u 1:(100*($4-$2)/$2) w linespoints ls 3 title '\footnotesize{RSPT3}', \
-     'out_64_new/out_l1.00' u 1:(100*($5-$2)/$2) w linespoints ls 4 title '\footnotesize{ENPT2}', \
-     'out_64_new/out_l1.00' u 1:(100*($6-$2)/$2) w linespoints ls 5 title '\footnotesize{ENPT3}';
+     'out_64_new/out_l1.00' u 1:(abs(100*($3-$2)/$2)) w linespoints ls 2 title '\footnotesize{RSPT2}', \
+     'out_64_new/out_l1.00' u 1:(abs(100*($4-$2)/$2)) w linespoints ls 3 title '\footnotesize{RSPT3}', \
+     'out_64_new/out_l1.00' u 1:(abs(100*($5-$2)/$2)) w linespoints ls 4 title '\footnotesize{ENPT2}', \
+     'out_64_new/out_l1.00' u 1:(abs(100*($6-$2)/$2)) w linespoints ls 5 title '\footnotesize{ENPT3}';

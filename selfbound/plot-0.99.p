@@ -24,6 +24,8 @@ set xrange [0:3]
 #set mxtics 2
 #set ytics 0.5*4.7,0.5*0.3,0.5*5.9
 #set mytics 2
+set mxtics 2
+set xtics 0,1,3
 set mytics 2
 set ytics 2.34, 0.04, 2.48
 set yrange [2.33:2.48]
@@ -64,7 +66,7 @@ set label 1 front '\textcolor{dblue}{\footnotesize{$\gamma = -0.99$}}'   at grap
         #'out_0.005000_gab_-0.990000' u 1:(($2)/$1)  w lines ls 1 title '', \
 
 plot    \
-        'out_exact' u 1:(2.45 + scale*$4/2) w lines lw 4 lc rgb '#1e1b64' title 'analytical', \
+        'out_exact' u 1:(2.45 + scale*$4/2) w lines lw 4 lc rgb '#1e1b64' title 'Analytical', \
         'out_0.005000_gab_-0.990000'  u ($1*$7*$7):(0.5*scale*$3/$1):(0.5*scale*$4/$1) w filledcurve fc rgb '#cbcae8' title '', \
         'out_0.005000_gab_-0.990000'  u ($1*$7*$7):(0.5*scale*$5/$1):(0.5*scale*$6/$1) w filledcurve fc rgb '#8583c9' title '', \
         'out_0.005000_gab_-0.990000'  u ($1*$7*$7):(0.5*scale*$4/$1)  w linespoints ls 3 title '\footnotesize{RSPT3}', \

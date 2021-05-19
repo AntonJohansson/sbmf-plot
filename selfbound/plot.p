@@ -59,7 +59,7 @@ set label 1 front '\textcolor{dred}{\footnotesize{$\gamma = -0.90$}}'   at graph
         #'out_0.005000_gab_-0.990000' u 1:(($2)/$1)  w lines ls 1 title '', \
 
 plot    \
-        'out_exact' u 1:(2.45 + scale*$3/2) w lines lw 4 lc rgb '#01400C' title 'analytical', \
+        'out_exact' u 1:(2.45 + scale*$3/2) w lines lw 4 lc rgb '#01400C' title 'Analytical', \
         'out_0.005000_gab_-0.900000'  u ($1*$7*$7):(0.5*scale*$3/$1):(0.5*scale*$4/$1) w filledcurve fc rgb '#f5a7a3' title '', \
         'out_0.005000_gab_-0.900000'  u ($1*$7*$7):(0.5*scale*$5/$1):(0.5*scale*$6/$1) w filledcurve fc rgb '#ed655e' title '', \
         'out_0.005000_gab_-0.900000'  u ($1*$7*$7):(0.5*scale*$4/$1)  w linespoints ls 3 title '\footnotesize{RSPT3}', \

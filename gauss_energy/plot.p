@@ -42,14 +42,14 @@ set label 2 front at screen 0.72, 0.65 '\footnotesize{\textbf{Asymmetric state}}
 plot  \
      NaN title ' ' lt -3, \
      'mflim/out_default_E' u 1:($3/$1) w linespoints ls 1 ps 1.5 title '\footnotesize{GP}', \
-     'mflim/out_default_E' u 1:($5/$1):(($6-($5-$6))/$1) w filledcurve fc rgb '#fce19c' title '', \
-     'mflim/out_default_E' u 1:($7/$1):(($8-($7-$8))/$1) w filledcurve fc rgb '#efca6c' title '', \
+     'mflim/out_default_E' u 1:($5/$1):(($6)/$1) w filledcurve fc rgb '#fce19c' title '', \
+     'mflim/out_default_E' u 1:($7/$1):(($8)/$1) w filledcurve fc rgb '#efca6c' title '', \
      'mflim/out_default_E' u 1:($6/$1) w linespoints ls 3 pt 7 ps 1.5 title '\footnotesize{RSPT3}', \
      'mflim/out_default_E' u 1:($8/$1) w linespoints ls 5 ps 1.5 title '\footnotesize{ENPT3}', \
      NaN title ' ' lt -3, \
      NaN title ' ' lt -3, \
-     'mflim/out_random_E'  u 1:($5/$1):(($6-($5-$6))/$1) w filledcurve fc rgb '#B3C2DC' title '', \
-     'mflim/out_random_E'  u 1:($7/$1):(($8-($7-$8))/$1) w filledcurve fc rgb '#6592e7' title '', \
+     'mflim/out_random_E'  u 1:($5/$1):(($6)/$1) w filledcurve fc rgb '#B3C2DC' title '', \
+     'mflim/out_random_E'  u 1:($7/$1):(($8)/$1) w filledcurve fc rgb '#6592e7' title '', \
      'mflim/out_random_E'  u 1:($3/$1) w linespoints ls 6  pt 2 ps 1.5 title '\footnotesize{GP}', \
      'mflim/out_random_E'  u 1:($6/$1) w linespoints ls 8  pt 9 ps 1.5 title '\footnotesize{RSPT3}', \
      'mflim/out_random_E'  u 1:($8/$1) w linespoints ls 10 pt 11 ps 1.5 title '\footnotesize{ENPT3}';

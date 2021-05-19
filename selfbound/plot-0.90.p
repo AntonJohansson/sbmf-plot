@@ -23,8 +23,10 @@ set xrange [0:3]
 #set xtics 0,100,300
 #set mxtics 2
 #set ytics 0.5*4.7,0.5*0.3,0.5*5.9
-#set mytics 2
-set format y '%.1f'
+set mytics 2
+set ytics 2.4, 0.2, 3
+set yrange [2.35:3.1]
+set format y '%.2f'
 
 set ylabel '$E/2N$ (a.\,u. $\times 10^{-3}$)';
 set xlabel '$n$ (m$^{-1}$)';
@@ -59,7 +61,7 @@ set label 1 front '\textcolor{dred}{\footnotesize{$\gamma = -0.90$}}'   at graph
         #'out_0.005000_gab_-0.990000' u 1:(($2)/$1)  w lines ls 1 title '', \
 
 plot    \
-        'out_exact' u 1:(2.45 + scale*$3/2) w lines lw 4 lc rgb '#01400C' title 'analytical', \
+        'out_exact' u 1:(2.45 + scale*$2/2) w lines lw 4 lc rgb '#890F08' title 'analytical', \
         'out_0.005000_gab_-0.900000'  u ($1*$7*$7):(0.5*scale*$3/$1):(0.5*scale*$4/$1) w filledcurve fc rgb '#f5a7a3' title '', \
         'out_0.005000_gab_-0.900000'  u ($1*$7*$7):(0.5*scale*$5/$1):(0.5*scale*$6/$1) w filledcurve fc rgb '#ed655e' title '', \
         'out_0.005000_gab_-0.900000'  u ($1*$7*$7):(0.5*scale*$4/$1)  w linespoints ls 3 title '\footnotesize{RSPT3}', \

@@ -1,5 +1,5 @@
 set term epslatex;
-set output 'imgs/selfbound-0.90.eps';
+set output 'imgs/selfbound-0.95.eps';
 
 set macros;
 TMARGIN = "set tmargin at screen 0.90; set bmargin at screen 0.55";
@@ -21,10 +21,10 @@ scale = 1000
 set xrange [0:3]
 #set yrange [0.5*4.65:0.5*6.0]
 #set xtics 0,100,300
-#set mxtics 2
-#set ytics 0.5*4.7,0.5*0.3,0.5*5.9
-#set mytics 2
-set format y '%.1f'
+set mytics 2
+set ytics 2.4, 0.1, 3
+set yrange [2.39:2.7]
+set format y '%.2f'
 
 set ylabel '$E/2N$ (a.\,u. $\times 10^{-3}$)';
 set xlabel '$n$ (m$^{-1}$)';
@@ -34,7 +34,7 @@ set key at graph 0.55, 0.95
 #set key outside right
 #set key box
 
-set label 1 front '\textcolor{dred}{\footnotesize{$\gamma = -0.90$}}'   at graph 0.41, 0.19
+set label 1 front '\textcolor{dgreen}{\footnotesize{$\gamma = -0.95$}}'   at graph 0.41, 0.19
 #set label 2 front '\textcolor{dgreen}{\footnotesize{$\gamma = -0.95$}}' at graph 0.48, 0.41
 #set label 3 front '\textcolor{dblue}{\footnotesize{$\gamma = -0.99$}}'  at graph 0.55, 0.23
 #set label 4 front '$\times 10^{-3}$' at screen 0.10, 0.99
@@ -59,11 +59,11 @@ set label 1 front '\textcolor{dred}{\footnotesize{$\gamma = -0.90$}}'   at graph
         #'out_0.005000_gab_-0.990000' u 1:(($2)/$1)  w lines ls 1 title '', \
 
 plot    \
-        'out_exact' u 1:(2.45 + scale*$3/2) w lines lw 4 lc rgb '#01400C' title 'analytical', \
-        'out_0.005000_gab_-0.900000'  u ($1*$7*$7):(0.5*scale*$3/$1):(0.5*scale*$4/$1) w filledcurve fc rgb '#f5a7a3' title '', \
-        'out_0.005000_gab_-0.900000'  u ($1*$7*$7):(0.5*scale*$5/$1):(0.5*scale*$6/$1) w filledcurve fc rgb '#ed655e' title '', \
-        'out_0.005000_gab_-0.900000'  u ($1*$7*$7):(0.5*scale*$4/$1)  w linespoints ls 3 title '\footnotesize{RSPT3}', \
-        'out_0.005000_gab_-0.900000'  u ($1*$7*$7):(0.5*scale*$6/$1)  w linespoints ls 5 title '\footnotesize{ENPT3}', \
+        'out_exact' u 1:(2.48 + scale*$3/2) w lines lw 4 lc rgb '#01400C' title 'analytical', \
+        'out_0.005000_gab_-0.950000'  u ($1*$7*$7):(0.5*scale*$3/$1):(0.5*scale*$4/$1) w filledcurve fc rgb '#b8e0be' title '', \
+        'out_0.005000_gab_-0.950000'  u ($1*$7*$7):(0.5*scale*$5/$1):(0.5*scale*$6/$1) w filledcurve fc rgb '#5fb96d' title '', \
+        'out_0.005000_gab_-0.950000'  u ($1*$7*$7):(0.5*scale*$4/$1)  w linespoints ls 3 title '\footnotesize{RSPT3}', \
+        'out_0.005000_gab_-0.950000'  u ($1*$7*$7):(0.5*scale*$6/$1)  w linespoints ls 5 title '\footnotesize{ENPT3}', \
         #'out_0.005000_gab_-0.950000'  u 1:(0.5*scale*$3/$1):(0.5*scale*($4-($3-$4))/$1) w filledcurve fc rgb '#b8e0be' title '', \
         #'out_0.005000_gab_-0.950000'  u 1:(0.5*scale*$5/$1):(0.5*scale*($6-($5-$6))/$1) w filledcurve fc rgb '#5fb96d' title '', \
         #'out_0.005000_gab_-0.990000'  u 1:(0.5*scale*$3/$1):(0.5*scale*($4-($3-$4))/$1) w filledcurve fc rgb '#cbcae8' title '', \

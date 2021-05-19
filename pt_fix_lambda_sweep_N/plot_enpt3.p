@@ -41,7 +41,7 @@ set mxtics 2
 set key at graph 0.95, 0.90
 set key spacing 1.25
 plot 0 w lines ls 7 title '', \
-     'out_64_new/out_l-0.50'    u 1:(abs(1000*($6-$2)/$2)) w linespoints pt 6 lw 2 lc rgb '#01400C' title '$\lambda = -0.5$',\
-     'out_64_new/out_l-1.00'    u 1:(abs(1000*($6-$2)/$2)) w linespoints pt 7 lw 2 lc rgb '#01400C' title '$\lambda = -1.0$',\
-     'out_64_new/out_l0.50'     u 1:(abs(1000*($6-$2)/$2)) w linespoints pt 4 lw 2 lc rgb '#56c268' title '$\lambda = 0.5$',\
-     'out_64_new/out_l1.00'     u 1:(abs(1000*($6-$2)/$2)) w linespoints pt 5 lw 2 lc rgb '#56c268' title '$\lambda = 1.0$';
+     'out_64_new/out_l-0.50'    u 1:(abs(1000*($8-$2)/$2)) w linespoints pt 6 lw 2 lc rgb '#01400C' title '$\lambda = -0.5$',\
+     'out_64_new/out_l-1.00'    u 1:(abs(1000*($8-$2)/$2)) w linespoints pt 7 lw 2 lc rgb '#01400C' title '$\lambda = -1.0$',\
+     'out_64_new/out_l0.50'     u 1:(abs(1000*($8-$2)/$2)) w linespoints pt 4 lw 2 lc rgb '#56c268' title '$\lambda = 0.5$',\
+     'out_64_new/out_l1.00'     u 1:(abs(1000*($8-$2)/$2)) w linespoints pt 5 lw 2 lc rgb '#56c268' title '$\lambda = 1.0$';

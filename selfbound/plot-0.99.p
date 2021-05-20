@@ -32,7 +32,7 @@ set yrange [2.33:2.48]
 set format y '%.2f'
 
 set ylabel '$E/2N$ (a.\,u. $\times 10^{-3}$)';
-set xlabel '$n$ (m$^{-1}$)';
+set xlabel '$\eta$ (m$^{-1}$)';
 
 set key spacing 1.5
 set key at graph 0.55, 0.95

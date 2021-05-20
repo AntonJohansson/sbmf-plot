@@ -23,15 +23,15 @@ set xrange [0:3]
 #set xtics 0,100,300
 #set mxtics 2
 #set ytics 0.5*4.7,0.5*0.3,0.5*5.9
-set mytics 2
-set ytics 2.4, 0.2, 3
 set mxtics 2
 set xtics 0,1,3
+set mytics 2
+set ytics 2.4, 0.2, 3
 set yrange [2.35:3.1]
 set format y '%.2f'
 
 set ylabel '$E/2N$ (a.\,u. $\times 10^{-3}$)';
-set xlabel '$n$ (m$^{-1}$)';
+set xlabel '$\eta$ (m$^{-1}$)';
 
 set key spacing 1.5
 set key at graph 0.55, 0.95
